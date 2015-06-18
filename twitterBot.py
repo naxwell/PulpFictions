@@ -18,7 +18,7 @@ while True:
     #print current_time
     #print current_time.minute
     #Attributes: hour, minute, second, microsecond, and tzinfo
-    if current_time.second == 00:
+    if current_time.minute == 00:
         if toPrint == True:
             print current_time
             toPrint = False
@@ -34,10 +34,10 @@ while True:
 
                 tweet = random.choice(first) + random.choice(second)    
 
-            print tweet
-            #twitter = TwitterAPI()
-            #twitter.tweet(tweet)
-    elif current_time.second != 00:
+            #print tweet
+            twitter = TwitterAPI()
+            twitter.tweet(tweet)
+    elif current_time.minute != 00:
         toPrint = True
         #print current_time.second
 
